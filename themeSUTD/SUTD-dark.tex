@@ -1,0 +1,101 @@
+% Include this file for dark background SUTD style
+% Nils Ole Tippenhauer, SUTD, 2014
+% This is somewhat hackish right now. Should be transformed into proper beamer theme
+\mode<presentation>
+
+\usecolortheme{rose}
+\useinnertheme{rounded}
+\usecolortheme{dolphin}
+\useoutertheme{infolines}
+
+% more stuff from Boadilla sty
+\setbeamersize{text margin left=1em,text margin right=1em}
+\setbeamertemplate{headline}[default] % disables headline
+%\mode
+%<all>
+
+% disable tool bar
+\beamertemplatenavigationsymbolsempty
+
+% Logo
+\usepackage{pgf}  
+\logo{\pgfputat{\pgfxy(-1,8.32)}{\pgfbox[center,base]{\includegraphics[height=0.6cm]{./SUTD_logo_eng_hor_rev}}}}
+
+% Fonts
+\usepackage{helvet}
+\usepackage{times} % for the serif stuff
+
+% Title page, simple version
+\setbeamertemplate{title page}{
+%{\usebeamerfont{subtitle}\insertsubtitle\\}
+ \usebeamerfont{title}\LARGE\bf\inserttitle\hrule
+ \vspace{0.1cm}
+ \usebeamerfont{author}\hfill\insertauthor
+}
+% for later: 
+% \usebeamerfont{subtitle}, \insertsubtitle
+% \usebeamerfont{institute}, \insertinstitute
+% \usebeamercolor[fg]{titlegraphic}, \inserttitlegraphic
+% \usebeamerfont{author}, \insertaddress
+
+% hline for the titles
+\setbeamertemplate{frametitle}{\usebeamerfont{title}\bf\insertframetitle\par\vskip-6pt\line(1,0){290}}
+
+% now the colors
+\definecolor{SUTDred}{RGB}{153,0,51}
+\definecolor{lgrey}{RGB}{204,204,204}
+\definecolor{mgrey}{RGB}{102,102,102}
+\definecolor{dgrey}{RGB}{51,51,51}
+\definecolor{Dgrey}{RGB}{37,37,37}%from the SUTD PowerPoint Template
+\definecolor{white}{RGB}{255,255,255}
+
+\setbeamercolor{normal text}{fg=white,bg=Dgrey}
+
+\setbeamercolor{section number projected}{fg=white}
+\setbeamercolor{section in toc}{fg=white}
+
+\setbeamercolor{alerted text}{fg=SUTDred}
+
+\setbeamertemplate{footline}{
+   \begin{beamercolorbox}[ht=4ex,leftskip=0.2cm,rightskip=.2cm]{footer line}
+    \hrule
+    \vspace{0.1cm}
+    \insertauthor \hspace{0.2cm} \inserttitle /\insertsection \hfill \insertdate\hspace{0.2cm}\insertframenumber\,/\,\inserttotalframenumber
+    \vspace{0.1cm}
+ \end{beamercolorbox}
+}
+
+\setbeamercolor*{item}{fg=white}
+\useitemizeitemtemplate{\Large\raise-1.0pt\hbox{\textbullet}}
+\usesubitemizeitemtemplate{%
+    \tiny\raise1.5pt\hbox{$\blacktriangleright$}%
+}
+\usesubsubitemizeitemtemplate{\large\raise-1.0pt\hbox{\textbullet}}
+
+\setbeamercolor*{palette primary}{fg=black,bg=white}
+\setbeamercolor*{palette secondary}{fg=black,bg=mgrey}
+\setbeamercolor*{palette tertiary}{fg=white,bg=black}
+\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{framesubtitle}{fg=white}
+\setbeamercolor{caption}{fg=white}
+
+%\setbeamercolor{block title}{fg=white,bg=dgrey}
+%\setbeamercolor{block body}{fg=black,bg=lgrey}
+% test invisible blocks
+\setbeamercolor{block title}{fg=white,bg=Dgrey}
+\setbeamercolor{block body}{fg=white,bg=Dgrey}
+
+% \setbeamercolor{block title alerted}{parent=alerted text,bg=black!15}
+\setbeamercolor{block title alerted}{fg=white,bg=dgrey}
+\setbeamercolor{block body alerted}{fg=black,bg=lgrey}
+\setbeamercolor{block title example}{fg=white,bg=dgrey}
+\setbeamercolor{block body example}{fg=black,bg=lgrey}
+
+% enumerate
+%\setbeamertemplate{enumerate items}[circle]
+\setbeamercolor{enumerate items}{fg=black}
+\setbeamertemplate{enumerate items}[square]
+\setbeamercolor{item projected}{fg=black, bg=white}

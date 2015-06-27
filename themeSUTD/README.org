@@ -2,7 +2,9 @@
 Simplistic, modern looking beamer theme that I use for my talks. To use in your beamer presentation, include it as following:
 
 =\input{../misc/SUTD-light}=
+
 =\AtBeginSection[]{\begin{frame}<beamer>\frametitle{}\LARGE\insertsectionhead\vspace{0.1cm}\hrule\end{frame}}=
+
 =\usetheme{default}=
 
-I plan to convert this to a proper theme when I have time (tm)
+I plan to convert this to a proper theme when I have time (tm).

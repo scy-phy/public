@@ -1,7 +1,7 @@
 * SUTD beamer Theme
 Simplistic, modern looking beamer theme that I use for my talks. To use in your beamer presentation, include it as following:
 
-=\input{../misc/SUTD-light}=
+=\input{./SUTD-light}=
 
 =\AtBeginSection[]{\begin{frame}<beamer>\frametitle{}\LARGE\insertsectionhead\vspace{0.1cm}\hrule\end{frame}}=
 

@@ -1,10 +1,11 @@
 * SUTD beamer Theme
-Simplistic, modern looking beamer theme that I use for my talks. To use in your beamer presentation, include it as following:
+Simplistic, modern looking beamer theme that I use for my talks. You will need to adapt a path to the logo (if you use it) manually. 
 
-=\input{./SUTD-light}=
+To use the theme in your beamer presentation, include it as following:
 
-=\AtBeginSection[]{\begin{frame}<beamer>\frametitle{}\LARGE\insertsectionhead\vspace{0.1cm}\hrule\end{frame}}=
-
-=\usetheme{default}=
-
+#+begin_src latex
+\input{./SUTD-light}
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{}\LARGE\insertsectionhead\vspace{0.1cm}\hrule\end{frame}}
+\usetheme{default}
+#+end_src
 I plan to convert this to a proper theme when I have time (tm).
